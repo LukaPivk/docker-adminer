@@ -51,7 +51,7 @@ RUN	set -x \
 &&	echo "$ADMINER_SRC_DOWNLOAD_SHA256  source.tar.gz" |sha256sum -c - \
 &&	tar xzf source.tar.gz --strip-components=1 "adminer-$ADMINER_VERSION/designs/" "adminer-$ADMINER_VERSION/plugins/" \
 &&	rm source.tar.gz
-
+COPY    adminer.php /var/www/html/adminer-4-sqlite3/index.php
 COPY	entrypoint.sh /usr/local/bin/
 ENTRYPOINT	[ "entrypoint.sh", "docker-php-entrypoint" ]
 

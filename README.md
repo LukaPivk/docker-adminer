@@ -1,4 +1,18 @@
-# https://github.com/TimWolla/docker-adminer
+# README
+
+docker build . -t database
+
+docker run -v /path_to_my_db:/db/ -p 8080:8080  database
+
+Navigate to http://localhost:8080/adminer-4-sqlite3/
+
+
+
+
+
+
+
+## Orignal file after this line
 
 ## Maintained by: [Tim Düsterhus (of the Docker Community)](https://github.com/TimWolla/docker-adminer)
 
